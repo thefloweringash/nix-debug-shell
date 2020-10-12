@@ -33,6 +33,7 @@ if [ -d "$buildDir" ]; then
     # TODO: maybe handle this instead of always wiping
     # echo "Reusing existing build directory '$buildDir'. Run 'nd-reset' to wipe it and start the build from scratch."
     echo "Wiping already existing build directory '$buildDir'."
+    chmod -R u+w "$buildDir"
     rm -rf "$buildDir"
 else
     echo "Creating new build directory '$buildDir'."
